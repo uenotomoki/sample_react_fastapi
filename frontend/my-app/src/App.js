@@ -7,7 +7,7 @@ function App() {
   const sendData = () => {
     const data = { message: "Hello from React!" };
 
-    axios.post("http://localhost:8000/api/endpoint", data, {
+    axios.post("https://sample-fastapi-4z53.onrender.com/api/endpoint", data, {
       headers: { 'Content-Type': 'application/json' },
       // 必要に応じてwithCredentialsを有効にする
       // withCredentials: true

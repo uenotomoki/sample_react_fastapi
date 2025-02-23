@@ -4,12 +4,12 @@ FROM node:latest
 # 2. 作業ディレクトリの設定
 WORKDIR /app
 
+# 4. ソースコードのコピー
+COPY . .
+
 # 3. 依存関係のコピーとインストール
 COPY package*.json ./
 RUN npm install
-
-# 4. ソースコードのコピー
-COPY . .
 
 # 5. ポートの公開
 EXPOSE 3000
